@@ -1,10 +1,10 @@
- ; nhap va xuat 1 ki tu  
+; nhap va xuat 1 ki tu  
 
 .model small
 .stack 100
 .data 
     nhap db 'nhap 1 ki tu tu ban phim: $' 
-    xuat db 'ki tu vua nhap la: $' 
+    xuat db 13, 10, 'ki tu vua nhap la: $' 
 .code 
 main proc
     ; khoi tao thanh ghi ds  
@@ -19,7 +19,8 @@ main proc
     ; thuc hien cong viec nhap 1 ki tu tu ban phim 
     ; ma ascii cua ki tu vua nhap se duoc luu trong al 
     mov ah, 01h 
-    int 21h 
+    int 21h        
+    mov bl, al
                                                        
     ;hien thi bien xuat 
     mov ah, 09h
@@ -27,7 +28,7 @@ main proc
     int 21h 
     
     ; hien thi ki tu vua nhap 
-    mov dl, al
+    mov dl, bl
     mov ah, 02h 
     int 21h 
     
