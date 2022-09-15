@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "About" 
-date: 2022-09-15
 permalink: /about/
 ---
 
